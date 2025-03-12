@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1 className="text-center mt-5">My name is Kolade!</h1>
+      <h1 className="text-center mt-5">My name is abdulsamad!</h1>
       <button className="btn btn-primary">Click Me</button>
     </div>
   );
