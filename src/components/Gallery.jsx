@@ -1,16 +1,26 @@
-const Gallery = ({ images }) => {
-  // Split images into groups of 6 for each slide
-  const groupedImages = [];
+import { useState, useEffect } from "react";
 
-  if (window.innerWidth > 580) {
-    for (let i = 0; i < images.length; i += 6) {
-      groupedImages.push(images.slice(i, i + 6));
+const Gallery = ({ images }) => {
+  const [groupedImages, setGroupedImages] = useState([]);
+
+  // Function to group images based on screen size
+  const groupImages = () => {
+    const newGroupedImages = [];
+    const itemsPerSlide = window.innerWidth > 580 ? 6 : 1; // Adjust number of images per slide
+
+    for (let i = 0; i < images.length; i += itemsPerSlide) {
+      newGroupedImages.push(images.slice(i, i + itemsPerSlide));
     }
-  } else {
-    for (let i = 0; i < images.length; i += 1) {
-      groupedImages.push(images.slice(i, i + 1));
-    }
-  }
+
+    setGroupedImages(newGroupedImages);
+  };
+
+  // Run grouping on mount and whenever screen resizes
+  useEffect(() => {
+    groupImages();
+    window.addEventListener("resize", groupImages);
+    return () => window.removeEventListener("resize", groupImages); // Cleanup on unmount
+  }, [images]);
 
   return (
     <div className="container-fluid mt-5">

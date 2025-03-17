@@ -5,6 +5,13 @@
   text-align: center;
 } */
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  background-color: #eef3f7;
+  color: rgb(19, 48, 74);
+}
 .zoom-out {
   transition: transform 0.5s ease;
 }
@@ -44,4 +51,12 @@
 .carousel-item .col-md-4,
 .carousel-item .col-lg-2 {
   padding: 5px;
+}
+
+.text-main {
+  color: rgb(19, 48, 74);
+}
+
+h1 {
+  text-transform: uppercase;
 }
