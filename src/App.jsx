@@ -12,24 +12,23 @@ function App() {
 
   return (
     <>
-    <div className="container">
-      <MapComponent />
-      <h1
-        className="display text-center text-bold text-main"
-        style={{ marginTop: "9rem" }}
-      >
-        OUR CLIMBS
-      </h1>
-      <p className="text-center">
-        We have climbed the highest mountains just to get a better view of the
-        earth below.
-      </p>
-      <Gallery images={images} />
-    </div>
-    
-    <Footer />
+      <div className="container">
+        <MapComponent />
+        <h1
+          className="display text-center text-bold text-main"
+          style={{ marginTop: "9rem" }}
+        >
+          OUR CLIMBS
+        </h1>
+        <p className="text-center">
+          We have climbed the highest mountains just to get a better view of the
+          earth below.
+        </p>
+        <Gallery images={images} />
+      </div>
+
+      <Footer />
     </>
-  
   );
 }
 
