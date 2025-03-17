@@ -2,15 +2,16 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import Footer from "./footer";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="container">
-      <h1 className="text-center mt-5">My name is abdulsamad!</h1>
-      <button className="btn btn-primary">Click Me</button>
-    </div>
+    <>
+    <Footer />
+    </>
+
   );
 }
 
