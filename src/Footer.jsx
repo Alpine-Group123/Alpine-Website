@@ -5,7 +5,7 @@
 const Footer = () => {
   return (
     <footer
-      className="container-fluid text-white row p-5"
+      className="container-fluid text-white row p-5 mt-5"
       style={{ backgroundColor: "rgb(19, 48, 74)" }}
     >
       <div className="col-sm m-4 fw-bold">
