@@ -1,16 +1,16 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-
+import React from "react";
+// import Home from "./Components/Home";
+import About from "./Components/About";
+import Navigation from "./Components/Navigation";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js"
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className="container">
-      <h1 className="text-center mt-5">My name is abdulsamad!</h1>
-      <button className="btn btn-primary">Click Me</button>
+    <div>
+      <Navigation />
+      <About />
     </div>
+
   );
 }
 
