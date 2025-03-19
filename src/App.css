@@ -8,7 +8,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 body {
   font-family: "Montserrat", sans-serif;
-  font-weight: bold;
   background-color: #eef3f7;
   color: rgb(19, 48, 74);
 }
@@ -59,4 +58,18 @@ body {
 
 h1 {
   text-transform: uppercase;
+}
+.stats-grid{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 1rem;
+}
+.head{
+  display: flex;
+  justify-content: start;
+  gap: 1rem;
+  align-items: start;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: blue !important;
 }

@@ -1,73 +1,43 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { useState } from 'react';
+import { Navbar, Nav, Container } from 'react-bootstrap';
+import headerLogo from '../assets/images/mountaineer_circular_image.png';
+import { navLinks } from '../constants';
 
 const Navigation = () => {
+  const [expanded, setExpanded] = useState(false);
 
   return (
-    <header className="pb-5 ff-secondary">
-      <nav className="fs-5 fw-light navbar navbar-expand-sm p-4 ps-5 mb-5 fixed-top">
-        <FontAwesomeIcon
-          icon={faBars}
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapsibleNavbar"
-          style={{ color: "#fff" }}
+    <Navbar expand="lg" bg="dark" fixed="top" className="shadow-sm py-2" expanded={expanded}>
+      <Container>
+        {/* Logo */}
+        <Navbar.Brand href="/" className='head'>
+          <img src={headerLogo} alt="Logo" border-radius width={50} height={47}/>
+          <h1>Alpine Crescent</h1>
+        </Navbar.Brand>
+
+        {/* Mobile Toggle Button (Bootstrap Default) */}
+        <Navbar.Toggle 
+          aria-controls="basic-navbar-nav" 
+          onClick={() => setExpanded(expanded ? false : true)}
         />
 
-        <div className="collapse navbar-collapse" id="collapsibleNavbar text-white">
-          <ul
-            className="bg-color-dark navbar-nav ms-auto pe-4 ps-4 rounded"
-            id="ul"
-          >
-            <li className="nav-item pe-3">
-              <a
-                className="d-inline-block position-relative nav-link nav-toggler"
-                role="button"
-                href="#about"
+        {/* Navigation Links */}
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto">
+            {navLinks.map((link) => (
+              <Nav.Link 
+                key={link.label} 
+                href={link.href} 
+                className="text-white fw-medium mx-3"
+                onClick={() => setExpanded(false)}  // Close menu on link click
               >
-                HOME
-              </a>
-            </li>
-            <li className="nav-item pe-3">
-              <a
-                className="d-inline-block position-relative nav-link nav-toggler"
-                role="button"
-                href="#skills"
-              >
-               PAGES
-              </a>
-            </li>
-            <li className="nav-item pe-3">
-              <a
-                className="d-inline-block position-relative nav-link nav-toggler"
-                href="#portfolio"
-              >
-               TREKS
-              </a>
-            </li>
-            
-            <li className="nav-item pe-3">
-              <a
-                className="d-inline-block position-relative nav-link nav-toggler"
-                href="#career"
-              >
-               CONTACT US
-              </a>
-            </li>
-            <li className="nav-item pe-3">
-              <a
-                className="nav-toggler d-inline-block position-relative"
-                href="https://resume.io/r/dj6p5YMIv"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+                {link.label}
+              </Nav.Link>
+            ))}
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 
