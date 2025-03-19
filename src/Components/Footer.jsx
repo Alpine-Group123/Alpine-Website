@@ -1,6 +1,14 @@
-// import { copyrightSign } from "../assets/icons";
-// import { footerLogo } from "../assets/images";
-// import { footerLinks, socialMedia } from "../constants";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import {
+  faInstagram,
+  faFacebook,
+  faXTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+
+// Add icons to the library
+library.add(fab, faInstagram, faFacebook, faXTwitter);
 
 const Footer = () => {
   return (
@@ -22,10 +30,42 @@ const Footer = () => {
         <div className="lh-lg">- 090909090909</div>
       </div>
       <div className="col-sm m-4 ">
-        <h3 className="">Contacts</h3>
-        <div className="lh-lg mt-4">- Lagos, Nigeria</div>
-        <div className="lh-lg">- hello@example.com</div>
-        <div className="lh-lg">- 090909090909</div>
+        <div>
+          <a href="https://wa.me/08168691211">
+            <FontAwesomeIcon
+              icon={["fab", "facebook"]}
+              size="2x"
+              className="p-2 text-white"
+            />
+          </a>
+          <a href="https://github.com/Kafolabi">
+            <FontAwesomeIcon
+              icon={["fab", "instagram"]}
+              size="2x"
+              className="p-2 fa-icon"
+            />
+          </a>
+          <a href="https://github.com/Kafolabi">
+            <FontAwesomeIcon
+              icon={["fab", "linkedin"]}
+              size="2x"
+              className="p-2 text-white"
+            />
+          </a>
+
+          <a href="https://t.me/08168691211">
+            <FontAwesomeIcon
+              icon={["fab", "x-twitter"]}
+              size="2x"
+              className="p-2 text-white"
+            />
+          </a>
+        </div>
+        <p className="mt-3 lh-lg">
+          {" "}
+          Subscribe to our newsletter of follow us on our social channels to
+          stay tuned
+        </p>
       </div>
       <hr></hr>
       <div className="text-center m-0 w-0 ">2025 Alpine Ascent APTECH </div>

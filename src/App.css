@@ -90,3 +90,9 @@ nav {
 .hr2 {
   /* margin-top: -2rem; */
 }
+
+.fa-icon {
+  color: white; /* Sets the text color */
+  /* fill: white !important;  */
+  font-weight: bold;
+}
