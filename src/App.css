@@ -1,16 +1,10 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 0;
-  padding: 2rem;
-  text-align: center;
-} */
-
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 body {
   font-family: "Montserrat", sans-serif;
-  font-weight: bold;
+  /* font-weight: bold; */
   background-color: #eef3f7;
   color: rgb(19, 48, 74);
+  font-size: 14px;
 }
 .zoom-out {
   transition: transform 0.5s ease;
@@ -59,4 +53,40 @@ body {
 
 h1 {
   text-transform: uppercase;
+}
+
+nav {
+  letter-spacing: 0.0425rem;
+}
+
+.nav-link::before {
+  width: 0%;
+  bottom: -5px;
+}
+
+.nav-link:hover::before,
+.nav-link:active::before {
+  width: 100%;
+}
+
+.nav-link {
+  opacity: 0.75 !important;
+  /* transition: 3000s; */
+}
+
+.nav-link:hover,
+.btn2:hover {
+  opacity: 1 !important;
+}
+
+.nav-link::before {
+  transition: 300ms;
+  height: 3px;
+  content: "";
+  position: absolute;
+  background-color: rgb(19, 48, 74);
+}
+
+.hr2 {
+  /* margin-top: -2rem; */
 }

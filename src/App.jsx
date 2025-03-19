@@ -1,9 +1,11 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "./App.css";
-import Footer from "./footer";
 import Gallery from "./components/Gallery";
 import MapComponent from "./components/MapComponent";
+import Navigation from "./components/Navigation";
+import About from "./components/About";
+import Footer from "./components/Footer";
 
 function App() {
   const images = Object.values(
@@ -13,6 +15,8 @@ function App() {
   return (
     <>
       <div className="container">
+        <Navigation />
+        <About />
         <MapComponent />
         <h1
           className="display text-center text-bold text-main"
@@ -26,7 +30,6 @@ function App() {
         </p>
         <Gallery images={images} />
       </div>
-
       <Footer />
     </>
   );
