@@ -1,11 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-scroll";
 
 const Navigation = () => {
-
   return (
     <header className="pb-5 ff-secondary">
-      <nav className="fs-5 fw-light navbar navbar-expand-sm p-4 ps-5 mb-5 fixed-top">
+      <nav className="fs-6 fw-light navbar navbar-expand-sm p-4 ps-5 mb-5 fixed-top">
         <FontAwesomeIcon
           icon={faBars}
           className="navbar-toggler"
@@ -15,54 +15,64 @@ const Navigation = () => {
           style={{ color: "#fff" }}
         />
 
-        <div className="collapse navbar-collapse" id="collapsibleNavbar text-white">
+        <div
+          className="collapse navbar-collapse"
+          id="collapsibleNavbar text-white"
+        >
           <ul
             className="bg-color-dark navbar-nav ms-auto pe-4 ps-4 rounded"
             id="ul"
           >
             <li className="nav-item pe-3">
-              <a
+              <Link
                 className="d-inline-block position-relative nav-link nav-toggler"
                 role="button"
-                href="#about"
+                to="home"
+                smooth={true}
+                duration={900}
               >
                 HOME
-              </a>
+              </Link>
             </li>
             <li className="nav-item pe-3">
-              <a
+              <Link
                 className="d-inline-block position-relative nav-link nav-toggler"
                 role="button"
-                href="#skills"
+                to="about"
               >
-               PAGES
-              </a>
+                PAGES
+              </Link>
             </li>
             <li className="nav-item pe-3">
-              <a
+              <Link
                 className="d-inline-block position-relative nav-link nav-toggler"
-                href="#portfolio"
+                to="portfolio"
+                smooth={true}
+                duration={900}
               >
-               TREKS
-              </a>
+                TREKS
+              </Link>
             </li>
-            
+
             <li className="nav-item pe-3">
-              <a
+              <Link
                 className="d-inline-block position-relative nav-link nav-toggler"
-                href="#career"
+                to="career"
+                smooth={true}
+                duration={900}
               >
-               CONTACT US
-              </a>
+                CONTACT US
+              </Link>
             </li>
             <li className="nav-item pe-3">
-              <a
+              <Link
                 className="nav-toggler d-inline-block position-relative"
-                href="https://resume.io/r/dj6p5YMIv"
+                to="https://resume.io/r/dj6p5YMIv"
                 target="_blank"
                 rel="noopener noreferrer"
-              >
-              </a>
+                smooth={true}
+                duration={900}
+              ></Link>
             </li>
           </ul>
         </div>
