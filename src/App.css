@@ -3,6 +3,7 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: #eef3f7;
   color: rgb(19, 48, 74);
+  font-size: 14px;
 }
 .zoom-out {
   transition: transform 0.5s ease;

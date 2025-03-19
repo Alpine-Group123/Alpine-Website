@@ -69,20 +69,27 @@ const MapComponent = () => {
       )}
       <div id="map" style={{ height: "500px", width: "100%" }}></div>
       {!mapLoaded && (
-        <div
-          style={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            zIndex: 1000,
-          }}
-        >
-          <div className="spinner-border" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </div>
-          <div className="text-center" style={{ marginLeft: "-2rem" }}>
-            Loading map...
+        <div style={{ position: "relative", minHeight: "100vh" }}>
+          <div
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              zIndex: 9999,
+              // position: "absolute", // Relative to the nearest positioned parent
+              // top: "50vh", // 50% of the viewport height (not the document)
+              // left: "50%",
+              // transform: "translate(-50%, -50%)",
+              // zIndex: 1000,
+            }}
+          >
+            <div className="spinner-border" role="status">
+              <span className="visually-hidden">Loading...</span>
+            </div>
+            <div className="text-center" style={{ marginLeft: "-2rem" }}>
+              Loading map...
+            </div>
           </div>
         </div>
       )}
