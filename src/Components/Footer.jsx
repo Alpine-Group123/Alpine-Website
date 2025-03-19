@@ -31,21 +31,21 @@ const Footer = () => {
       </div>
       <div className="col-sm m-4 ">
         <div>
-          <a href="https://wa.me/08168691211">
+          <a href="#">
             <FontAwesomeIcon
               icon={["fab", "facebook"]}
               size="2x"
               className="p-2 text-white"
             />
           </a>
-          <a href="https://github.com/Kafolabi">
+          <a href="#">
             <FontAwesomeIcon
               icon={["fab", "instagram"]}
               size="2x"
               className="p-2 fa-icon"
             />
           </a>
-          <a href="https://github.com/Kafolabi">
+          <a href="#">
             <FontAwesomeIcon
               icon={["fab", "linkedin"]}
               size="2x"
@@ -53,7 +53,7 @@ const Footer = () => {
             />
           </a>
 
-          <a href="https://t.me/08168691211">
+          <a href="#">
             <FontAwesomeIcon
               icon={["fab", "x-twitter"]}
               size="2x"
