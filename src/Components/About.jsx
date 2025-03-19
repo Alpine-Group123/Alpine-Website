@@ -6,9 +6,8 @@ const About = () => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className="container text-center py-5" id="about">
     <div
-      className="container text-center py-5"
+      className="container text-center py-5" id="about"
       style={{
         height: "100vh",
         width: "100vw",
