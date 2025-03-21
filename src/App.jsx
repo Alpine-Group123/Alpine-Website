@@ -4,9 +4,10 @@ import "./App.css";
 import Gallery from "./Components/Gallery";
 import About from "./Components/About";
 import MapComponent from "./Components/MapComponent";
-import Navigation from "./Components/Navigation";
-import Footer from "./Footer";
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 import TripsSection from "./Components/TripSection";
+import Home from "./components/Home";
 
 function App() {
   const images = Object.values(
@@ -14,24 +15,27 @@ function App() {
   ).map((module) => module.default);
 
   return (
-    <div className="container">
-      <TripsSection />
-      <About />
+    <>
       <Navigation />
-      <MapComponent />
-      <h1
-        className="display text-center text-bold text-main"
-        style={{ marginTop: "9rem" }}
-      >
-        OUR CLIMBS
-      </h1>
-      <p className="text-center">
-        We have climbed the highest mountains just to get a better view of the
-        earth below.
-      </p>
-      <Gallery images={images} />
+      <Home />
+      <div className="container">
+        <TripsSection />
+        <About />
+        <MapComponent />
+        <h1
+          className="display text-center text-bold text-main"
+          style={{ marginTop: "9rem" }}
+        >
+          OUR CLIMBS
+        </h1>
+        <p className="text-center">
+          We have climbed the highest mountains just to get a better view of the
+          earth below.
+        </p>
+        <Gallery images={images} />
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }
 
