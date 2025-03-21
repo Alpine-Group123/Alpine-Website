@@ -6,7 +6,10 @@ import About from "./Components/About";
 import MapComponent from "./Components/MapComponent";
 import Navigation from "./Components/Navigation";
 import Footer from "./Components/Footer";
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 import TripsSection from "./Components/TripSection";
+import Home from "./components/Home";
 
 function App() {
   const images = Object.values(
