@@ -10,10 +10,10 @@ const About = () => {
       className="container text-center py-5" id="about"
       style={{
         height: "100vh",
-        width: "100vw",
         backgroundColor: "white",
         paddingTop: "100px",
       }}
+      
     >
       {/* Section Title */}
       <h2 className="fw-bold text-primary">ABOUT US</h2>

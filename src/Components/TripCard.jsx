@@ -5,7 +5,7 @@ const TripCard = ({ image, price, days, difficulty, title, description, location
     <Card className="shadow-sm my-5">
       {/* Image on top of the card */}
       <div className="position-relative">
-        <Card.Img variant="top" src={image} alt={title} style={{height: "400px", objectFit: "cover"}} />
+        <Card.Img variant="top" src={image} alt={title} style={{height: "250px", objectFit: "cover"}} />
         {/* Badge overlay  */}
         <div className="position-absolute top-0 start-0 bg-primary text-white px-3 py-1 rounded">
           FROM ${price}

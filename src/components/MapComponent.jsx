@@ -61,7 +61,7 @@ const MapComponent = () => {
     <div>
       {mapLoaded && (
         <>
-          <h1 className="text-center my-4">ALPINE CLUBS</h1>
+          <h1 className="text-center my-4 text-primary">ALPINE CLUBS</h1>
           <p className="text-center my-4">
             Join one of our clubs to climb the highest peaks in the world!
           </p>

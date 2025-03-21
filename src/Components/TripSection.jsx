@@ -36,7 +36,7 @@ const TripsSection = () => {
 
         {/* Section Info */}
         <Col md={4} className="text-start my-5">
-          <h2 className="fw-bold">LATEST TRIPS</h2>
+          <h2 className="fw-bold text-primary">LATEST TRIPS</h2>
           <p className="text-muted">Explore the unexplored world</p>
           <p className="text-muted">
             Here are the latest trips which we are about to embark. You can join us.

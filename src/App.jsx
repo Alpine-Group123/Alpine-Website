@@ -5,7 +5,7 @@ import Gallery from "./Components/Gallery";
 import About from "./Components/About";
 import MapComponent from "./Components/MapComponent";
 import Navigation from "./Components/Navigation";
-import Footer from "./Footer";
+import Footer from "./Components/Footer";
 import TripsSection from "./Components/TripSection";
 
 function App() {
@@ -14,13 +14,16 @@ function App() {
   ).map((module) => module.default);
 
   return (
+    <>
     <div className="container">
       <TripsSection />
+      <div>
       <About />
+      </div>
       <Navigation />
       <MapComponent />
       <h1
-        className="display text-center text-bold text-main"
+        className="display text-center text-bold text-main text-primary"
         style={{ marginTop: "9rem" }}
       >
         OUR CLIMBS
@@ -30,8 +33,10 @@ function App() {
         earth below.
       </p>
       <Gallery images={images} />
+      
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }
 

@@ -12,7 +12,7 @@ const Navigation = () => {
         {/* Logo */}
         <Navbar.Brand href="/" className='head'>
           <img src={headerLogo} alt="Logo" border-radius width={50} height={47}/>
-          <h1>Alpine Crescent</h1>
+          <h2>Alpine Crescents</h2>
         </Navbar.Brand>
 
         {/* Mobile Toggle Button (Bootstrap Default) */}
