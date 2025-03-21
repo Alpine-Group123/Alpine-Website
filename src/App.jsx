@@ -4,12 +4,10 @@ import "./App.css";
 import Gallery from "./Components/Gallery";
 import About from "./Components/About";
 import MapComponent from "./Components/MapComponent";
-import Navigation from "./Components/Navigation";
 import Footer from "./Components/Footer";
-import Navigation from "./components/Navigation";
-import Footer from "./components/Footer";
 import TripsSection from "./Components/TripSection";
-import Home from "./components/Home";
+import Home from "./Components/Home";
+import Navigation from "./Components/Navigation";
 
 function App() {
   const images = Object.values(
@@ -19,6 +17,7 @@ function App() {
   return (
     <>
     <div className="container">
+      <Home />
       <TripsSection />
       <div>
       <About />
