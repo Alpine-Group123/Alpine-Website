@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
+import { Navbar, Nav, Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHamburger } from '@fortawesome/free-solid-svg-icons'; // Import the hamburger icon
 import headerLogo from '../assets/images/mountaineer_circular_image.png';

@@ -8,6 +8,7 @@ import Footer from "./Components/Footer";
 import TripsSection from "./Components/TripSection";
 import Home from "./Components/Home";
 import Navigation from "./Components/Navigation";
+import Newsletter from "./Components/Newsletter";
 import Guidelines from "./Components/Guidelines";
 
 function App() {
@@ -37,8 +38,8 @@ function App() {
       <Gallery images={images} />
       
       </div>
-      <Newsletter />
-      <Footer />
+    <Newsletter />
+    <Footer />
     </>
   );
 }

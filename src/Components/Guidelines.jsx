@@ -1,16 +1,22 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Card, Row, Col } from "react-bootstrap";
+import Boots from "../assets/images/climbing boots.jpg";
+import Harness from "../assets/images/climbing harness.png";
+import Helmet from "../assets/images/helmet.jpg";
+import Tent from "../assets/images/Tent2.jpg";
+import Rope from "../assets/images/rope.jpg";
+import Axe from "../assets/images/axe.jpg";
 
 const Guidelines = () => {
   return (
-    <Container className="mt-4">
+    <Container className="mt-4" id="guidelines">
       <h2 className="text-center text-primary mb-4">Mountaineering Guidelines</h2>
 
       {/* Rules & Regulations */}
-      <section className="mb-5">
+      <section className="mb-5 text-center">
         <h3>Rules & Regulations</h3>
-        <p>To ensure safety and environmental conservation, all climbers must follow these rules:</p>
+        <p className="text-center">To ensure safety and environmental conservation, all climbers must follow these rules:</p>
 
         <h5>Permits & Documentation</h5>
         <ul>
@@ -40,16 +46,16 @@ const Guidelines = () => {
 
       {/* Tools & Materials */}
       <section>
-        <h3>Essential Tools & Materials</h3>
+        <h3 className="text-primary">Essential Tools & Materials</h3>
         <p>Before embarking on a climb, ensure you have the following essential gear:</p>
 
-        <Row className="g-4">
+        <Row className="g-4 display-flex justify-content-space-between">
           {/* Item 1 */}
           <Col md={4}>
             <Card>
-              <Card.Img variant="top" src="" alt="Climbing Boots" />
+              <Card.Img variant="top" src={Boots} alt="Climbing Boots" />
               <Card.Body>
-                <Card.Title>Climbing Boots</Card.Title>
+                <Card.Title className="title">Climbing Boots</Card.Title>
                 <Card.Text>Insulated, waterproof, and designed for high-altitude trekking.</Card.Text>
               </Card.Body>
             </Card>
@@ -58,9 +64,9 @@ const Guidelines = () => {
           {/* Item 2 */}
           <Col md={4}>
             <Card>
-              <Card.Img variant="top" src="" alt="Climbing Harness" />
+              <Card.Img variant="top" src={Harness} alt="Climbing Harness" />
               <Card.Body>
-                <Card.Title>Climbing Harness</Card.Title>
+                <Card.Title className="title">Climbing Harness</Card.Title>
                 <Card.Text>Provides safety and support when using ropes and anchors.</Card.Text>
               </Card.Body>
             </Card>
@@ -69,9 +75,9 @@ const Guidelines = () => {
           {/* Item 3 */}
           <Col md={4}>
             <Card>
-              <Card.Img variant="top" src="" alt="Climbing Helmet" />
+              <Card.Img variant="top" src={Helmet} alt="Climbing Helmet" />
               <Card.Body>
-                <Card.Title>Climbing Helmet</Card.Title>
+                <Card.Title className="title">Climbing Helmet</Card.Title>
                 <Card.Text>Protects against falling debris and head injuries.</Card.Text>
               </Card.Body>
             </Card>
@@ -80,9 +86,9 @@ const Guidelines = () => {
           {/* Item 4 */}
           <Col md={4}>
             <Card>
-              <Card.Img variant="top" src="https://via.placeholder.com/300x200?text=Ice+Ax" alt="Ice Axe" />
+              <Card.Img variant="top" src={Axe} alt="Ice Axe" />
               <Card.Body>
-                <Card.Title>Ice Axe</Card.Title>
+                <Card.Title className="title">Ice Axe</Card.Title>
                 <Card.Text>Used for stability, self-arrest, and climbing icy slopes.</Card.Text>
               </Card.Body>
             </Card>
@@ -91,9 +97,9 @@ const Guidelines = () => {
           {/* Item 5 */}
           <Col md={4}>
             <Card>
-              <Card.Img variant="top" src="https://via.placeholder.com/300x200?text=Ropes" alt="Climbing Ropes" />
+              <Card.Img variant="top" src={Rope} alt="Climbing Ropes" />
               <Card.Body>
-                <Card.Title>Climbing Ropes</Card.Title>
+                <Card.Title className="title">Climbing Ropes</Card.Title>
                 <Card.Text>Essential for belaying, rappelling, and securing climbers.</Card.Text>
               </Card.Body>
             </Card>
@@ -102,9 +108,9 @@ const Guidelines = () => {
           {/* Item 6 */}
           <Col md={4}>
             <Card>
-              <Card.Img variant="top" src="https://via.placeholder.com/300x200?text=Tent" alt="Mountaineering Tent" />
+              <Card.Img variant="top" src={Tent} alt="Mountaineering Tent" height="355px" />
               <Card.Body>
-                <Card.Title>Mountaineering Tent</Card.Title>
+                <Card.Title className="title">Mountaineering Tent</Card.Title>
                 <Card.Text>Four-season tent designed for extreme weather conditions.</Card.Text>
               </Card.Body>
             </Card>

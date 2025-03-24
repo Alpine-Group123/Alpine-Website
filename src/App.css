@@ -80,3 +80,13 @@ p{
   width: auto;
   padding: 1rem;
 }
+.title{
+  color: orangered;
+}
+.text{
+  color: black;
+}
+ul{
+  list-style-type: none;
+  padding: 0;
+}
