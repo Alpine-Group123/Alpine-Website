@@ -10,10 +10,6 @@ import Axe from "../assets/images/axe.jpg";
 
 const Guidelines = () => {
   return (
-    <Container className="mt-4">
-      <h2 className="text-center text-primary mb-4">
-        Mountaineering Guidelines
-      </h2>
     <Container className="mt-4" id="guidelines">
       <h2 className="text-center text-primary mb-4">Mountaineering Guidelines</h2>
 
