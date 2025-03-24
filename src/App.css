@@ -53,19 +53,41 @@ body {
 h1 {
   text-transform: uppercase;
 }
-.stats-grid{
+.stats-grid {
   display: flex;
   justify-content: space-between;
   text-align: center;
   margin-top: 1rem;
 }
-.head{
+.head {
   display: flex;
   justify-content: start;
   gap: 1rem;
   align-items: start;
   color: white !important;
 }
-.info{
+.info {
   width: 310px;
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none; /* Removes default Bootstrap underline */
+  padding-bottom: 5px; /* Prevents text from touching underline */
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 0%;
+  height: 3px;
+  background-color: white;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
 }

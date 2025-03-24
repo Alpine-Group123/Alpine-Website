@@ -6,8 +6,9 @@ import About from "./Components/About";
 import MapComponent from "./Components/MapComponent";
 import Footer from "./Components/Footer";
 import TripsSection from "./Components/TripSection";
-import Home from "./Components/Home";
-import Navigation from "./Components/Navigation";
+import Home from "./components/Home";
+import Navigation from "./components/Navigation";
+import Newsletter from "./components/Newsletter";
 
 function App() {
   const images = Object.values(
@@ -16,27 +17,27 @@ function App() {
 
   return (
     <>
-    <div className="container">
       <Home />
-      <TripsSection />
-      <div>
-      <About />
+      <div className="container">
+        <TripsSection />
+        <div>
+          <About />
+        </div>
+        <Navigation />
+        <MapComponent />
+        <h1
+          className="text-center fw-bold text-primary"
+          style={{ marginTop: "9rem" }}
+        >
+          OUR CLIMBS
+        </h1>
+        <p className="text-center">
+          We have climbed the highest mountains just to get a better view of the
+          earth below.
+        </p>
+        <Gallery images={images} />
       </div>
-      <Navigation />
-      <MapComponent />
-      <h1
-        className="display text-center text-bold text-main text-primary"
-        style={{ marginTop: "9rem" }}
-      >
-        OUR CLIMBS
-      </h1>
-      <p className="text-center">
-        We have climbed the highest mountains just to get a better view of the
-        earth below.
-      </p>
-      <Gallery images={images} />
-      
-      </div>
+      <Newsletter />
       <Footer />
     </>
   );

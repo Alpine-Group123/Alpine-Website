@@ -58,10 +58,10 @@ const MapComponent = () => {
   }, [userCoords]);
 
   return (
-    <div>
+    <section id="clubs">
       {mapLoaded && (
         <>
-          <h1 className="text-center my-4 text-primary">ALPINE CLUBS</h1>
+          <h1 className="text-center my-4 pt-5 text-primary fw-bold">ALPINE CLUBS</h1>
           <p className="text-center my-4">
             Join one of our clubs to climb the highest peaks in the world!
           </p>
@@ -77,11 +77,6 @@ const MapComponent = () => {
               left: "50%",
               transform: "translate(-50%, -50%)",
               zIndex: 9999,
-              // position: "absolute", // Relative to the nearest positioned parent
-              // top: "50vh", // 50% of the viewport height (not the document)
-              // left: "50%",
-              // transform: "translate(-50%, -50%)",
-              // zIndex: 1000,
             }}
           >
             <div className="spinner-border" role="status">
@@ -93,7 +88,7 @@ const MapComponent = () => {
           </div>
         </div>
       )}
-    </div>
+    </section>
   );
 };
 

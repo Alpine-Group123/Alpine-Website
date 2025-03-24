@@ -23,7 +23,7 @@ const Gallery = ({ images }) => {
   }, [images]);
 
   return (
-    <div className="container-fluid mt-5 id=gallery">
+    <div className="container-fluid mt-5" id="climbs">
       <div
         id="carouselExample"
         className="carousel slide"
