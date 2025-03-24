@@ -37,6 +37,7 @@ function App() {
       <Gallery images={images} />
       
       </div>
+      <Newsletter />
       <Footer />
     </>
   );

@@ -53,20 +53,20 @@ body {
 h1 {
   text-transform: uppercase;
 }
-.stats-grid{
+.stats-grid {
   display: flex;
   justify-content: space-between;
   text-align: center;
   margin-top: 1rem;
 }
-.head{
+.head {
   display: flex;
   justify-content: start;
   gap: 1rem;
   align-items: start;
   color: white !important;
 }
-.info{
+.info {
   width: 310px;
 }
 p{

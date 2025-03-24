@@ -38,7 +38,7 @@ const Footer = () => {
             <FontAwesomeIcon
               icon={["fab", "instagram"]}
               size="2x"
-              className="p-2 fa-icon"
+              className="p-2 text-white"
             />
           </a>
           <a href="#">

@@ -9,7 +9,13 @@ const Navigation = () => {
   const [expanded, setExpanded] = useState(false); // State to control the menu toggle
 
   return (
-    <Navbar expand="lg" bg="dark" fixed="top" className="shadow-sm py-2" expanded={expanded}>
+    <Navbar
+      expand="lg"
+      bg="dark"
+      fixed="top"
+      className="shadow-sm py-2"
+      expanded={expanded}
+    >
       <Container>
         {/* Logo */}
         <Navbar.Brand href="/" className="head">
