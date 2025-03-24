@@ -8,6 +8,7 @@ import Footer from "./Components/Footer";
 import TripsSection from "./Components/TripSection";
 import Home from "./Components/Home";
 import Navigation from "./Components/Navigation";
+import Guidelines from "./Components/Guidelines";
 
 function App() {
   const images = Object.values(
@@ -16,12 +17,11 @@ function App() {
 
   return (
     <>
+    <Home />
+    <TripsSection />
+    <About />
+    <Guidelines />
     <div className="container">
-      <Home />
-      <TripsSection />
-      <div>
-      <About />
-      </div>
       <Navigation />
       <MapComponent />
       <h1

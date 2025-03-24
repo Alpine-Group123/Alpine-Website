@@ -29,7 +29,7 @@ const Home = () => {
 
   return (
     <section
-      className="position-relative text-white text-center h-100 d-flex align-items-center"
+      className="position-relative text-white text-center h-100 d-flex align-items-center" id="home"
       style={{
         background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${backgroundImg}) no-repeat center center/cover`,
         zIndex: -1,
@@ -72,7 +72,7 @@ const Home = () => {
               animate={{ opacity: [0, 1] }}
               transition={{ duration: 4 }}
             >
-              {stats.altitude} m
+              {stats.altitude} 
             </motion.div>
           </p>
           <p className="pt-3">

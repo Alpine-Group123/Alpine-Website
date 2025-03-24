@@ -69,3 +69,14 @@ h1 {
 .info{
   width: 310px;
 }
+p{
+  text-align: start;
+}
+.x{
+  text-align: center;
+}
+#about{
+  height: fit-content;
+  width: auto;
+  padding: 1rem;
+}

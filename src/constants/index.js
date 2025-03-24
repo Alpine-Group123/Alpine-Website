@@ -5,5 +5,5 @@ export const navLinks = [
     { href: "#about", label: "About Us" },
     { href: "#products", label: "Clubs" },
     { href: "#gallery", label: "Climbs" },
-    { href: "#contact-us", label: "Contact Us" },
+    { href: "#contact us", label: "Contact Us" },
 ];

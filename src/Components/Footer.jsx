@@ -1,11 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
-import {
-  faInstagram,
-  faFacebook,
-  faXTwitter,
-} from "@fortawesome/free-brands-svg-icons";
+import { faInstagram, faFacebook, faXTwitter} from "@fortawesome/free-brands-svg-icons";
 
 // Add icons to the library
 library.add(fab, faInstagram, faFacebook, faXTwitter);
@@ -16,8 +12,8 @@ const Footer = () => {
       className="container-fluid text-white row p-5 mt-5"
       style={{ backgroundColor: "rgb(19, 48, 74)" }}
     >
-      <div className="col-sm m-4 ">
-        <h3 className="">Alpins</h3>
+      <div className="col-sm m-4" id="contact us">
+        <h3 className="">Alpine Ascents</h3>
         <p className="lh-lg mt-4">
           Somewhere between the bottom of the climb and the summit is the answer
           to the mystery why we climb
@@ -68,7 +64,7 @@ const Footer = () => {
         </p>
       </div>
       <hr></hr>
-      <div className="text-center m-0 w-0 ">2025 Alpine Ascent APTECH </div>
+      <div className="text-center m-0 w-0 ">2025 Alpine Ascents APTECH </div>
     </footer>
   );
 };
