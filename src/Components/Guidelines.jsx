@@ -8,7 +8,7 @@ const Guidelines = () => {
       <h2 className="text-center text-primary mb-4">Mountaineering Guidelines</h2>
 
       {/* Rules & Regulations */}
-      <section className="mb-5">
+      <section className="mb-5 lh-lg">
         <h3>Rules & Regulations</h3>
         <p>To ensure safety and environmental conservation, all climbers must follow these rules:</p>
 
