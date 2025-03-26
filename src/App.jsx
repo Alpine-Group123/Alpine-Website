@@ -8,9 +8,8 @@ import Footer from "./Components/Footer";
 import TripsSection from "./Components/TripSection";
 import Home from "./components/Home";
 import Navigation from "./Components/Navigation";
-import Newsletter from "./Components/Newsletter";
-import Guidelines from "./Components/Guidelines";
 import Newsletter from "./components/Newsletter";
+import Guidelines from "./Components/Guidelines";
 
 function App() {
   const images = Object.values(
@@ -19,28 +18,27 @@ function App() {
 
   return (
     <>
-    <Home />
-    <TripsSection />
-    <About />
-    <Guidelines />
-    <div className="container">
-      <Navigation />
-      <MapComponent />
-      <h1
-        className="display text-center text-bold text-main text-primary"
-        style={{ marginTop: "9rem" }}
-      >
-        OUR CLIMBS
-      </h1>
-      <p className="text-center">
-        We have climbed the highest mountains just to get a better view of the
-        earth below.
-      </p>
-      <Gallery images={images} />
-      
+      <Home />
+      <TripsSection />
+      <About />
+      <Guidelines />
+      <div className="container">
+        <Navigation />
+        <MapComponent />
+        <h1
+          className="display text-center text-bold text-main text-primary"
+          style={{ marginTop: "9rem" }}
+        >
+          OUR CLIMBS
+        </h1>
+        <p className="text-center">
+          We have climbed the highest mountains just to get a better view of the
+          earth below.
+        </p>
+        <Gallery images={images} />
       </div>
-    <Newsletter />
-    <Footer />
+      <Newsletter />
+      <Footer />
     </>
   );
 }

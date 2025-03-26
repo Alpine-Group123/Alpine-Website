@@ -1,12 +1,89 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
-import { faInstagram, faFacebook, faXTwitter} from "@fortawesome/free-brands-svg-icons";
+import {
+  faInstagram,
+  faFacebook,
+  faXTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 
+import { useEffect, useState } from "react";
 // Add icons to the library
 library.add(fab, faInstagram, faFacebook, faXTwitter);
 
 const Footer = () => {
+  const [dateTime, setDateTime] = useState("");
+  const [location, setLocation] = useState("Fetching location...");
+
+  // Function to update Date and Time
+  useEffect(() => {
+    const updateDateTime = () => {
+      const now = new Date();
+      setDateTime(now.toLocaleString());
+    };
+    updateDateTime();
+    const interval = setInterval(updateDateTime, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Function to fetch Geolocation
+  // useEffect(() => {
+  //   if ("geolocation" in navigator) {
+  //     navigator.geolocation.getCurrentPosition(
+  //       async (position) => {
+  //         const { latitude, longitude } = position.coords;
+  //         try {
+  //           const response = await fetch(
+  //             `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`
+  //           );
+  //           const data = await response.json();
+  //           // console.log(data);
+  //           setLocation(data.address.city + ", " + data.address.country);
+  //         } catch (error) {
+  //           setLocation("Location unavailable");
+  //         }
+  //       },
+  //       () => setLocation("Location denied")
+  //     );
+  //   } else {
+  //     setLocation("Geolocation not supported");
+  //   }
+  // }, []);
+  useEffect(() => {
+    console.log("Fetching location...");
+
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        async (position) => {
+          const { latitude, longitude } = position.coords;
+          try {
+            const response = await fetch(
+              `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`
+            );
+            const data = await response.json();
+            console.log("Location data:", data);
+
+            // If city is undefined, fall back to state
+            const city =
+              data.address.city || data.address.state || "Unknown location";
+            const country = data.address.country || "Unknown country";
+
+            setLocation(`${city}, ${country}`);
+          } catch (error) {
+            console.error("Error fetching location:", error);
+            setLocation("Location unavailable");
+          }
+        },
+        (error) => {
+          console.error("Geolocation error:", error);
+          setLocation("Location denied");
+        }
+      );
+    } else {
+      setLocation("Geolocation not supported");
+    }
+  }, []);
+
   return (
     <footer
       className="container-fluid text-white row p-5 mt-5"
@@ -63,6 +140,9 @@ const Footer = () => {
           stay tuned
         </p>
       </div>
+      <marquee>
+        📅 {dateTime} | 📍 {location}
+      </marquee>
       <hr></hr>
       <div className="text-center m-0 w-0 ">2025 Alpine Ascents APTECH </div>
     </footer>

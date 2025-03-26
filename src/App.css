@@ -69,24 +69,32 @@ h1 {
 .info {
   width: 310px;
 }
-p{
+p {
   text-align: start;
 }
-.x{
+.x {
   text-align: center;
 }
-#about{
+#about {
   height: fit-content;
   width: auto;
   padding: 1rem;
 }
-.title{
+.title {
   color: orangered;
 }
-.text{
+.text {
   color: black;
 }
-ul{
+ul {
   list-style-type: none;
   padding: 0;
+}
+
+.nav-link:hover {
+  color: var(--bs-primary) !important;
+}
+.nav-link.active {
+  color: var(--bs-primary) !important;
+  font-weight: bold; /* Optional: Make the active link stand out */
 }
