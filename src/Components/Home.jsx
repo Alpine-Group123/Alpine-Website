@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import backgroundImg from "../assets/images/IceMountain.jpg";
 
-
 const Home = () => {
   const [stats, setStats] = useState({ altitude: 0, tracks: 0, tourists: 0 });
 
@@ -28,7 +27,7 @@ const Home = () => {
 
   return (
     <section
-      className="text-white text-center h-100" 
+      className="text-white text-center h-100"
       style={{
         background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${backgroundImg}) no-repeat center center/cover`,
         zIndex: -1,
@@ -37,7 +36,8 @@ const Home = () => {
     >
       {/* Content */}
       <div
-        className="row" id="home"
+        className="row"
+        id="home"
         style={{ paddingTop: "15rem", paddingInlineStart: "5rem" }}
       >
         <div className="col-sm text-white">
@@ -75,7 +75,7 @@ const Home = () => {
               animate={{ opacity: [0, 1] }}
               transition={{ duration: 4 }}
             >
-              {stats.altitude} 
+              {stats.altitude}
             </motion.div>
           </div>
           <div className="pt-4">
