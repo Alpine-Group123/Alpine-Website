@@ -99,7 +99,7 @@ const Home = () => {
             </motion.div>
           </div>
           <button
-            className="btn bg-primary mt-5 text-white h6"
+            className="btn bg-primary mt-5 text-white h6" href="#climbs"
             onClick={() => {
               const climbsSection = document.getElementById("climbs");
               if (climbsSection) {

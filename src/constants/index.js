@@ -7,3 +7,4 @@ export const navLinks = [
     { href: "#climbs", label: "Climbs" },
     { href: "#contact-us", label: "Contact Us" },
 ];
+ 

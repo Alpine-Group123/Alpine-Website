@@ -6,11 +6,10 @@ import About from "./Components/About";
 import MapComponent from "./Components/MapComponent";
 import Footer from "./Components/Footer";
 import TripsSection from "./Components/TripSection";
-import Home from "./components/Home";
+import Home from "./Components/Home";
 import Navigation from "./Components/Navigation";
 import Newsletter from "./Components/Newsletter";
 import Guidelines from "./Components/Guidelines";
-import Newsletter from "./components/Newsletter";
 
 function App() {
   const images = Object.values(
