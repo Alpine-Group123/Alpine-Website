@@ -4,6 +4,9 @@ import { Accordion, Button } from "react-bootstrap";
 
 const About = () => {
   const [expanded, setExpanded] = useState(false);
+  const [activeLink, setActiveLink] = useState("");
+
+  const handleSetActive = (label) => setActiveLink(label);
 
   return (
     <div
@@ -45,7 +48,11 @@ const About = () => {
             climbing mountains.
           </p>
           <div className="d-flex align-items-center">
-            <Button variant="primary" className="px-4 py-2">Join us now</Button>
+            {/* Join Us Button */}
+            <Button variant="primary" className="px-4 py-2">
+              <a href="#newsletter" className="link">Join us now</a>
+            </Button>
+            {/* Read More Link */}
             <a href="#read-more"  className="ms-3 text-primary text-decoration-none"
               onClick={(e) => {
               e.preventDefault();

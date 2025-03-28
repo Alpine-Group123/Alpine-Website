@@ -41,7 +41,9 @@ const TripsSection = () => {
           <p className="text-muted">
             Here are the latest trips which we are about to embark. You can join us.
           </p>
-          <Button variant="primary">Join us now</Button>
+          <Button variant="primary">
+             <a href="#newsletter" className="link">Join us now</a>
+          </Button>
         </Col>
       </Row>
     </Container>

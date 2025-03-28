@@ -10,7 +10,7 @@ const handleSubmit = (e) => {
 };
 
 return (
-    <section className="my-5 container">
+    <section className="my-5 container" id="newsletter">
         <h1 className="text-center mt-4 text-primary fw-bold pt-5">NEWSLETTER</h1>
         <p className="text-center h5 pt-3">Subscribe now to our newsletter!</p>
         <form className="text-center my-4 row mt-5" onSubmit={handleSubmit}>
