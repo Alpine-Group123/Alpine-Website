@@ -48,9 +48,7 @@ const Guidelines = () => {
           <h5>Environmental Protection</h5>
           <ul>
             <li>Follow the "Leave No Trace" principles.</li>
-            <li className="">
-              Avoid disturbing wildlife and natural habitats.
-            </li>
+            <li>Avoid disturbing wildlife and natural habitats.</li>
           </ul>
         </div>
       </section>
@@ -79,7 +77,7 @@ const Guidelines = () => {
                 style={{ maxWidth: "100%", height: "auto" }}
               />
               <Card.Body>
-                <Card.Title>Climbing Boots</Card.Title>
+                <Card.Title className="title">Climbing Boots</Card.Title>
                 <Card.Text>
                   Insulated, waterproof, and designed for high-altitude
                   trekking.
@@ -104,7 +102,7 @@ const Guidelines = () => {
           {/* Item 3 */}
           <Col md={4}>
             <Card>
-              <Card.Img variant="top" src={Helmet} alt="Climbing Helmet" />
+              <Card.Img variant="top" src={Helmet} alt="Climbing Helmet"/>
               <Card.Body>
                 <Card.Title className="title">Climbing Helmet</Card.Title>
                 <Card.Text>

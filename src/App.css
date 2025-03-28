@@ -98,3 +98,7 @@ ul {
   color: var(--bs-primary) !important;
   font-weight: bold; /* Optional: Make the active link stand out */
 }
+.link{
+  text-decoration: none !important;
+  color: white !important;
+}
