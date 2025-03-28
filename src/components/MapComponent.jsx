@@ -25,6 +25,78 @@ const MapComponent = () => {
       coords: [39.5501, -105.7821],
       successStory: "Guiding climbers since 1980.",
     },
+    {
+      id: 4,
+      name: "Andes Adventurers",
+      coords: [-32.6532, -70.0109],
+      successStory: "Conquered Aconcagua countless times!",
+    },
+    {
+      id: 5,
+      name: "Alpine Ascenders",
+      coords: [45.8326, 6.8652],
+      successStory: "Masters of Mont Blanc ascents.",
+    },
+    {
+      id: 6,
+      name: "Denali Dreamers",
+      coords: [63.0695, -151.0074],
+      successStory: "Leading expeditions to North America's highest peak.",
+    },
+    {
+      id: 7,
+      name: "Patagonia Climbers",
+      coords: [-49.3186, -73.5916],
+      successStory: "Specialists in Fitz Roy and Cerro Torre climbs.",
+    },
+    {
+      id: 8,
+      name: "Himalayan Heroes",
+      coords: [28.5983, 83.9311],
+      successStory: "Guided hundreds to Annapurna's summit.",
+    },
+    {
+      id: 9,
+      name: "Atlas Mountaineers",
+      coords: [31.0738, -7.9126],
+      successStory: "Experts in Toubkal expeditions.",
+    },
+    {
+      id: 10,
+      name: "Alaskan Ice Climbers",
+      coords: [61.2181, -149.9003],
+      successStory: "Pioneers of ice climbing in Alaska.",
+    },
+    {
+      id: 11,
+      name: "Pyrenees Pioneers",
+      coords: [42.503, 1.518],
+      successStory: "Trailblazers of Pyrenean adventures.",
+    },
+    {
+      id: 12,
+      name: "Sierra Nevada Seekers",
+      coords: [36.5786, -118.2923],
+      successStory: "Conquered Mount Whitney countless times.",
+    },
+    {
+      id: 13,
+      name: "Carpathian Climbers",
+      coords: [47.1585, 24.3916],
+      successStory: "Masters of the Carpathian peaks.",
+    },
+    {
+      id: 14,
+      name: "Great Dividers",
+      coords: [-37.456, 145.856],
+      successStory: "Explorers of Australia's Great Dividing Range.",
+    },
+    {
+      id: 15,
+      name: "Scandinavian Summiteers",
+      coords: [61.255, 8.985],
+      successStory: "Specialists in Nordic mountain expeditions.",
+    },
   ];
 
   useEffect(() => {

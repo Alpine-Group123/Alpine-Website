@@ -1,21 +1,32 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "./App.css";
-import Gallery from "./Components/Gallery";
-import About from "./Components/About";
-import MapComponent from "./Components/MapComponent";
-import Footer from "./Components/Footer";
-import TripsSection from "./Components/TripSection";
+import Gallery from "./components/Gallery";
+import About from "./components/About";
+import MapComponent from "./components/MapComponent";
+import Footer from "./components/Footer";
+import TripsSection from "./components/TripSection";
 import Home from "./components/Home";
-import Navigation from "./Components/Navigation";
+import Navigation from "./components/Navigation";
 import Newsletter from "./components/Newsletter";
-import Guidelines from "./Components/Guidelines";
+import Guidelines from "./components/Guidelines";
+
+import { useState, useEffect } from "react";
 
 function App() {
-  const images = Object.values(
-    import.meta.glob("./assets/mountaingallery/*.jpg", { eager: true })
-  ).map((module) => module.default);
+  // const images = Object.values(
+  //   import.meta.glob("./assets/mountaingallery/*.jpg", { eager: true })
+  // ).map((module) => module.default);
 
+  const [images, setImages] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/data") // Adjust API endpoint if necessary
+      .then((response) => response.json())
+      .then((data) => setImages(data))
+      .catch((error) => console.error("Error loading images:", error));
+  }, []);
+  console.log(images[0]?.img_path);
   return (
     <>
       <Home />
@@ -26,7 +37,7 @@ function App() {
         <Navigation />
         <MapComponent />
         <h1
-          className="display text-center text-bold text-main text-primary"
+          className="text-center my-4 pt-5 text-primary fw-bold"
           style={{ marginTop: "9rem" }}
         >
           OUR CLIMBS

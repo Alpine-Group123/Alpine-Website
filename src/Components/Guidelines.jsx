@@ -11,7 +11,9 @@ import Axe from "../assets/images/axe.jpg";
 const Guidelines = () => {
   return (
     <Container className="mt-4" id="guidelines">
-      <h2 className="text-center text-primary mb-4">Mountaineering Guidelines</h2>
+      <h1 className="text-center my-4 pt-5 pb-5 text-primary fw-bold">
+        MOUNTAINEERING GUIDELINES
+      </h1>
 
       {/* Rules & Regulations */}
       <section className="mb-5 lh-lg row">
@@ -55,7 +57,9 @@ const Guidelines = () => {
 
       {/* Tools & Materials */}
       <section>
-        <h3 className="text-primary text-center">Essential Tools & Materials</h3>
+        <h3 className="text-center my-4 pt-5 text-primary fw-bold">
+          ESSENTIAL TOOLS & MATERIALS
+        </h3>
         <p>
           Before embarking on a climb, ensure you have the following essential
           gear:
@@ -65,7 +69,15 @@ const Guidelines = () => {
           {/* Item 1 */}
           <Col md={4}>
             <Card>
-              <Card.Img variant="top" src={Boots} alt="Climbing Boots" />
+              <Card.Img
+                variant="top"
+                src={Boots}
+                alt="Climbing Boots"
+                loading="lazy"
+                width={800}
+                height={600}
+                style={{ maxWidth: "100%", height: "auto" }}
+              />
               <Card.Body>
                 <Card.Title>Climbing Boots</Card.Title>
                 <Card.Text>
@@ -82,7 +94,9 @@ const Guidelines = () => {
               <Card.Img variant="top" src={Harness} alt="Climbing Harness" />
               <Card.Body>
                 <Card.Title className="title">Climbing Harness</Card.Title>
-                <Card.Text>Provides safety and support when using ropes and anchors.</Card.Text>
+                <Card.Text>
+                  Provides safety and support when using ropes and anchors.
+                </Card.Text>
               </Card.Body>
             </Card>
           </Col>
@@ -93,7 +107,9 @@ const Guidelines = () => {
               <Card.Img variant="top" src={Helmet} alt="Climbing Helmet" />
               <Card.Body>
                 <Card.Title className="title">Climbing Helmet</Card.Title>
-                <Card.Text>Protects against falling debris and head injuries.</Card.Text>
+                <Card.Text>
+                  Protects against falling debris and head injuries.
+                </Card.Text>
               </Card.Body>
             </Card>
           </Col>
@@ -104,7 +120,9 @@ const Guidelines = () => {
               <Card.Img variant="top" src={Axe} alt="Ice Axe" />
               <Card.Body>
                 <Card.Title className="title">Ice Axe</Card.Title>
-                <Card.Text>Used for stability, self-arrest, and climbing icy slopes.</Card.Text>
+                <Card.Text>
+                  Used for stability, self-arrest, and climbing icy slopes.
+                </Card.Text>
               </Card.Body>
             </Card>
           </Col>
@@ -115,7 +133,9 @@ const Guidelines = () => {
               <Card.Img variant="top" src={Rope} alt="Climbing Ropes" />
               <Card.Body>
                 <Card.Title className="title">Climbing Ropes</Card.Title>
-                <Card.Text>Essential for belaying, rappelling, and securing climbers.</Card.Text>
+                <Card.Text>
+                  Essential for belaying, rappelling, and securing climbers.
+                </Card.Text>
               </Card.Body>
             </Card>
           </Col>
@@ -123,10 +143,17 @@ const Guidelines = () => {
           {/* Item 6 */}
           <Col md={4}>
             <Card>
-              <Card.Img variant="top" src={Tent} alt="Mountaineering Tent" height="355px" />
+              <Card.Img
+                variant="top"
+                src={Tent}
+                alt="Mountaineering Tent"
+                height="355px"
+              />
               <Card.Body>
                 <Card.Title className="title">Mountaineering Tent</Card.Title>
-                <Card.Text>Four-season tent designed for extreme weather conditions.</Card.Text>
+                <Card.Text>
+                  Four-season tent designed for extreme weather conditions.
+                </Card.Text>
               </Card.Body>
             </Card>
           </Col>

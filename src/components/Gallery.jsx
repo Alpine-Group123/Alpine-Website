@@ -1,12 +1,23 @@
 import { useState, useEffect } from "react";
 
-const Gallery = ({ images }) => {
+const Gallery = () => {
+  const [images, setImages] = useState([]);
   const [groupedImages, setGroupedImages] = useState([]);
+
+  // Fetch images from JSON server
+  useEffect(() => {
+    fetch("http://localhost:5000/data") // Fetch from json-server
+      .then((response) => response.json())
+      .then((data) => setImages(data.map((item) => item.img_path))) // Extract img_path
+      .catch((error) => console.error("Error loading images:", error));
+  }, []);
 
   // Function to group images based on screen size
   const groupImages = () => {
+    if (images.length === 0) return;
+
+    const itemsPerSlide = window.innerWidth > 580 ? 6 : 1;
     const newGroupedImages = [];
-    const itemsPerSlide = window.innerWidth > 580 ? 6 : 1; // Adjust number of images per slide
 
     for (let i = 0; i < images.length; i += itemsPerSlide) {
       newGroupedImages.push(images.slice(i, i + itemsPerSlide));
@@ -15,15 +26,20 @@ const Gallery = ({ images }) => {
     setGroupedImages(newGroupedImages);
   };
 
-  // Run grouping on mount and whenever screen resizes
+  // Run grouping on mount and whenever screen resizes (with debounce)
   useEffect(() => {
     groupImages();
-    window.addEventListener("resize", groupImages);
-    return () => window.removeEventListener("resize", groupImages); // Cleanup on unmount
+    const handleResize = () => {
+      clearTimeout(window.resizeTimeout);
+      window.resizeTimeout = setTimeout(groupImages, 300); // Debounce resizing
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize); // Cleanup
   }, [images]);
 
   return (
-    <div className="container-fluid mt-5 id=gallery" id="gallery">
+    <div className="container-fluid mt-5" id="climbs">
       <div
         id="carouselExample"
         className="carousel slide"
@@ -37,12 +53,19 @@ const Gallery = ({ images }) => {
             >
               <div className="row justify-content-center">
                 {group.map((image, imgIndex) => (
-                  <div key={imgIndex} className="zoom-out col-md-4 col-sm-4">
+                  <div key={imgIndex} className="col-md-4 col-sm-4">
                     <img
                       src={image}
-                      className="d-block w-100 h-100"
-                      alt={`Slide ${index + 1} - Image ${imgIndex + 1}`}
-                      style={{ objectFit: "cover" }}
+                      className="d-block w-100"
+                      alt="Gallery image"
+                      style={{
+                        objectFit: "cover",
+                        maxWidth: "100%",
+                        height: "auto",
+                      }}
+                      loading="lazy"
+                      width={800}
+                      height={600}
                     />
                   </div>
                 ))}

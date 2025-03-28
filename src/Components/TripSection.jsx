@@ -10,7 +10,8 @@ const TripsSection = () => {
       days: "3",
       difficulty: "Easy",
       title: "Bianco Excursion",
-      description: "Monte Bianco is a mountain located in deep nature and rivers.",
+      description:
+        "Monte Bianco is a mountain located in deep nature and rivers.",
       location: "Monte Bianco, Alpes, Italy",
     },
     {
@@ -19,7 +20,8 @@ const TripsSection = () => {
       days: "5",
       difficulty: "Medium",
       title: "Civetta Trekking",
-      description: "Civetta is a mountain located in Alps and is one of the most famous.",
+      description:
+        "Civetta is a mountain located in Alps and is one of the most famous.",
       location: "Civetta, Alpes, Italy",
     },
   ];
@@ -36,12 +38,15 @@ const TripsSection = () => {
 
         {/* Section Info */}
         <Col md={4} className="text-start my-5">
-          <h2 className="text-primary">LATEST TRIPS</h2>
+          <h1 className="my-4 pt-5 text-primary fw-bold">LATEST TRIPS</h1>
           <p className="text-muted">Explore the unexplored world</p>
           <p className="text-muted">
-            Here are the latest trips which we are about to embark. You can join us.
+            Here are the latest trips which we are about to embark. You can join
+            us.
           </p>
-          <Button variant="primary">Join us now</Button>
+          <Button variant="primary" href="#newsletter">
+            Join us now
+          </Button>
         </Col>
       </Row>
     </Container>

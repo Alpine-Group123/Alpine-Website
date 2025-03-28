@@ -1,0 +1,16 @@
+{
+  "data": [
+    { "img_path": "/public/mountainGallery/mountain1.jpg" },
+    { "img_path": "/public/mountainGallery/mountain2.jpg" },
+    { "img_path": "/public/mountainGallery/mountain3.jpg" },
+    { "img_path": "/public/mountainGallery/mountain4.jpg" },
+    { "img_path": "/public/mountainGallery/mountain5.jpg" },
+    { "img_path": "/public/mountainGallery/mountain6.jpg" },
+    { "img_path": "/public/mountainGallery/mountain7.jpg" },
+    { "img_path": "/public/mountainGallery/mountain8.jpg" },
+    { "img_path": "/public/mountainGallery/mountain9.jpg" },
+    { "img_path": "/public/mountainGallery/mountain10.jpg" },
+    { "img_path": "/public/mountainGallery/mountain11.jpg" },
+    { "img_path": "/public/mountainGallery/mountain12.jpg" }
+  ]
+}
