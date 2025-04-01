@@ -2,6 +2,34 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Accordion, Button } from "react-bootstrap";
 
+/**
+ * About Component
+ * 
+ * This component renders the "About Us" section of the website. It includes a title, 
+ * a description of the organization, and an interactive accordion with various topics 
+ * related to mountaineering. Users can toggle the visibility of the full description 
+ * and navigate through the accordion to explore additional information.
+ * 
+ * Features:
+ * - Displays a brief introduction about the organization.
+ * - Provides a "Read more" link to expand or collapse the description text.
+ * - Includes an accordion with multiple sections such as History, Techniques, Hazards, etc.
+ * - Contains a "Join us now" button linking to the newsletter section.
+ * 
+ * @component
+ * @returns {JSX.Element} The rendered About component.
+ * 
+ * @example
+ * // Usage
+ * <About />
+ * 
+ * @function handleSetActive
+ * @description Updates the active link state when a specific label is clicked.
+ * @param {string} label - The label of the active link.
+ * 
+ * @state {boolean} expanded - Tracks whether the description text is expanded or collapsed.
+ * @state {string} activeLink - Tracks the currently active link in the component.
+ */
 const About = () => {
   const [expanded, setExpanded] = useState(false);
   const [activeLink, setActiveLink] = useState("");

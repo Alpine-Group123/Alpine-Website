@@ -2,6 +2,27 @@ import { useState, useEffect } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
+/**
+ * MapComponent is a React functional component that renders an interactive map
+ * using Leaflet.js. It displays the user's current location (if geolocation is enabled)
+ * and marks various alpine club locations on the map with popups containing their details.
+ *
+ * Features:
+ * - Fetches and displays the user's current geographical coordinates.
+ * - Initializes a Leaflet map centered on the user's location.
+ * - Adds markers for predefined alpine club locations with popups showing their names and success stories.
+ * - Displays a loading spinner until the map is fully loaded.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered MapComponent with a map and alpine club details.
+ *
+ * @example
+ * <MapComponent />
+ *
+ * Dependencies:
+ * - Leaflet.js for map rendering and interactivity.
+ * - React hooks (`useState`, `useEffect`) for state management and side effects.
+ */
 const MapComponent = () => {
   const [map, setMap] = useState(null);
   const [userCoords, setUserCoords] = useState(null);

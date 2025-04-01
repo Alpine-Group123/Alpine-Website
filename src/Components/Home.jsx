@@ -2,6 +2,46 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import backgroundImg from "../assets/images/IceMountain.jpg";
 
+/**
+ * Home Component
+ * 
+ * This component represents the homepage of the Alpine Website. It features a visually appealing 
+ * hero section with animated statistics and a motivational quote. The component is designed to 
+ * engage users and encourage exploration of the website.
+ * 
+ * Features:
+ * - Animated statistics for altitude, tracks, and tourists, which increment dynamically over time.
+ * - A motivational quote with a smooth fade-in animation.
+ * - A call-to-action button that smoothly scrolls to the "climbs" section of the page.
+ * - A responsive layout with a visually striking background image.
+ * 
+ * @component
+ * @returns {JSX.Element} The rendered Home component.
+ * 
+ * @example
+ * // Usage
+ * <Home />
+ * 
+ * @dependencies
+ * - React: useState, useEffect for state management and lifecycle handling.
+ * - Framer Motion: motion for animations.
+ * 
+ * @styles
+ * - Background image with a dark overlay for better text visibility.
+ * - Responsive typography and layout for optimal viewing on various devices.
+ * - Custom button styling for a modern and interactive user experience.
+ * 
+ * @animations
+ * - Smooth fade-in and slide-up animations for the heading and statistics.
+ * - Incremental animation for statistics over a 2-second duration.
+ * 
+ * @interactivity
+ * - "Explore now" button scrolls to the "climbs" section using smooth scrolling.
+ * 
+ * @notes
+ * - Ensure the `backgroundImg` variable is defined and points to a valid image URL.
+ * - The component is designed to be used as part of the Alpine Website project.
+ */
 const Home = () => {
   const [stats, setStats] = useState({ altitude: 0, tracks: 0, tourists: 0 });
 

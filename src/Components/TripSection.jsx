@@ -2,6 +2,23 @@ import TripCard from "./TripCard";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import IMount from "../assets/images/Hiker2.jpg";
 import Hiker from "../assets/images/Hiker.jpg";
+/**
+ * The `TripsSection` component displays a section showcasing the latest trips.
+ * It includes a list of trip cards and a section with informational text and a call-to-action button.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered TripsSection component.
+ *
+ * @example
+ * <TripsSection />
+ *
+ * @description
+ * The component renders:
+ * - A list of trip cards, each displaying details such as image, price, days, difficulty, title, description, and location.
+ * - A section with a title, descriptive text, and a button to encourage users to join the trips.
+ *
+ * The `trips` array contains the data for each trip, which is passed as props to the `TripCard` component.
+ */
 const TripsSection = () => {
   const trips = [
     {

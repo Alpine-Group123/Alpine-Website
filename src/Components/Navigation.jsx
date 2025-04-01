@@ -5,6 +5,40 @@ import { faHamburger } from "@fortawesome/free-solid-svg-icons"; // Import the h
 import headerLogo from "../assets/images/mountaineer_circular_image.png";
 import { navLinks } from "../constants";
 
+/**
+ * Navigation Component
+ * 
+ * This component renders a responsive navigation bar for the Alpine Ascents website.
+ * It includes a logo, visitor count, navigation links, and a mobile-friendly toggle button.
+ * 
+ * Features:
+ * - Tracks and displays the number of visitors using localStorage.
+ * - Highlights the active navigation link.
+ * - Provides a collapsible menu for mobile devices.
+ * 
+ * @component
+ * @returns {JSX.Element} The rendered navigation bar component.
+ * 
+ * @example
+ * <Navigation />
+ * 
+ * State:
+ * - `expanded` (boolean): Controls the toggle state of the navigation menu.
+ * - `visitorCount` (number): Tracks the number of visitors to the site.
+ * - `activeLink` (string): Stores the label of the currently active navigation link.
+ * 
+ * Effects:
+ * - Tracks visitor count on component mount and updates localStorage.
+ * 
+ * Props:
+ * - None
+ * 
+ * Dependencies:
+ * - React Bootstrap components: `Navbar`, `Container`, `Nav`.
+ * - FontAwesomeIcon for the hamburger menu icon.
+ * - `headerLogo` (image): Logo displayed in the navigation bar.
+ * - `navLinks` (array): Array of navigation link objects with `label` and `href` properties.
+ */
 const Navigation = () => {
   const [expanded, setExpanded] = useState(false); // State to control the menu toggle
   const [visitorCount, setVisitorCount] = useState(0);

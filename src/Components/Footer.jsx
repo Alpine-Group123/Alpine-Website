@@ -26,29 +26,6 @@ const Footer = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Function to fetch Geolocation
-  // useEffect(() => {
-  //   if ("geolocation" in navigator) {
-  //     navigator.geolocation.getCurrentPosition(
-  //       async (position) => {
-  //         const { latitude, longitude } = position.coords;
-  //         try {
-  //           const response = await fetch(
-  //             `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`
-  //           );
-  //           const data = await response.json();
-  //           // console.log(data);
-  //           setLocation(data.address.city + ", " + data.address.country);
-  //         } catch (error) {
-  //           setLocation("Location unavailable");
-  //         }
-  //       },
-  //       () => setLocation("Location denied")
-  //     );
-  //   } else {
-  //     setLocation("Geolocation not supported");
-  //   }
-  // }, []);
   useEffect(() => {
     console.log("Fetching location...");
 
