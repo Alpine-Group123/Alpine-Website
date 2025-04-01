@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "./App.css";
 import Gallery from "./components/Gallery";
-import About from "./components/About";
+import About from "./components/About"; // Ensure the file name is exactly "About.jsx" or "About.js" in the components folder
 import MapComponent from "./components/MapComponent";
 import Footer from "./components/Footer";
 import TripsSection from "./components/TripSection";
