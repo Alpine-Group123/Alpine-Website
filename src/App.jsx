@@ -4,7 +4,7 @@ import "./App.css";
 import Gallery from "./components/Gallery";
 import About from "./components/About";
 import MapComponent from "./components/MapComponent";
-import Footer from "./Components/Footer";
+import Footer from "./components/Footer";
 import TripsSection from "./components/TripSection";
 import Home from "./components/Home";
 import Navigation from "./components/Navigation";
@@ -49,7 +49,6 @@ import { useState, useEffect } from "react";
  * Handle potential errors during data fetching gracefully.
  */
 function App() {
-
   const [images, setImages] = useState([]);
 
   useEffect(() => {
